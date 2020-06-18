@@ -17,18 +17,15 @@
 <body>
 
     <div class = "container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="weatherInput" placeholder="input" aria-label="input" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                    <button type="button" class="btn btn-primary" id="searchButton">Primary</button>
-                    </div>
-                </div>             
-            </div>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Weather Dashboard</a>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" id="weatherInput" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" id="searchButton" type="button">Search</button>
+            </form>
+          </nav>
             <div id ="infoContainer"></div>
-            <div id ="dailyContainer"></div>
-        </div>
+            <div id ="dailyContainer"></div>    
     </div>
    
     

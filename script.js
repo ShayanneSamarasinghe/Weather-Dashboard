@@ -8,7 +8,7 @@ searchButton.addEventListener ("click", function(){
     var city = weatherInput.value
     var apiKey = "34022347658ce6e3238847b999454f96"
 
-$.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey}`, function(data){
+$.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey}&units=metric`, function(data){
     console.log(data)
     var currentDay = moment.unix(data.list[0].dt).format('dddd, MMMM Do, YYYY')
     console.log(currentDay)
@@ -28,8 +28,8 @@ $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey
         `<div class="card" style="width: 12rem;">
         <img src=${dailyIconurl} class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5> ${dailyTemp},${dailyHumidity}
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">Temperature: ${dailyTemp}°C </h5> 
+            <p class="card-text">Humidity: ${dailyHumidity}%</p>
         </div>
         </div>`
 
@@ -39,15 +39,15 @@ $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey
     }
 
 
+        
 
 
 
 
 
-
-    $.get (`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`,function(response){
+    $.get (`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`,function(response){
         console.log(response)
-        var currentDay = moment.unix(response.current.dt).format('dddd, MMMM Do, YYYY')
+        var currentDay = moment.unix(response.current.dt).format('dddd, MMMM Do, YYYY, h:mm:ss a')
         console.log(currentDay)
         var temp = response.current.temp
         var humidity = response.current.humidity
@@ -62,8 +62,11 @@ $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey
         `<div class="card" style="width: 12rem;">
         <img src=${iconurl} class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>${temp},${humidity},${windSpeed}, ${uv},${description}
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">Temperature: ${temp}°C</h5>
+            <h6>Humidity: ${humidity}%</h6>
+            <h6>Wind: ${windSpeed}</h6>
+            <h6>UV Index: ${uv}</h6>
+            <h6>${description}</h6>
         </div>
         </div>`
 
@@ -72,7 +75,7 @@ $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${apiKey
         
     })
 
-    // dailyOutput.innerHTML = dailyContainer
+    
 
 })
 
