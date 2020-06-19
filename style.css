@@ -1,0 +1,14 @@
+ .moderate {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  
+  .severe {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .favourable {
+    background-color: #77dd77;
+    color: white;
+  }
