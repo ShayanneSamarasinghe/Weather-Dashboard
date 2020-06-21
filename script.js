@@ -120,31 +120,14 @@ function outputWeatherInfo(locationInfo, weatherInfo){
       "http://openweathermap.org/img/w/" + dailyIcon + ".png";
 
     var dailyContainer =
-    
-    // <div class = "container">
-    //   <div class="row">
-    //     <div class="col-md-3 col-lg-3 d-flex justify-content-center"">
-    //       <div class="card">
-    //         <div class="card-body">
-    //           <h5 class="card-title">${date}</h5>
-    //           <h5 class="card-title"><img src= ${dailyIconurl} width="80" height="80"></h5>Temperature: ${dailyTemp}°C</h5>
-    //           <p class="card-text">Humidity: ${dailyHumidity}%</p>
-    //         </div>
-    //       </div>
-    //   </div>
-    // </div>
-    `<div class="container-fluid">
-      <div class="row">
-      <div class="col-sm-6 d-flex justify-content-center">
-        <div class="card" style="width: 20rem;">
+    ` 
+      <div class="card" style="width: 20rem;">
           <div class="card-body">
             <h5 class="card-title">${date}</h5>
             <h5 class="card-title"><img src = ${dailyIconurl} width="80" height="80"></h5>Temperature: ${dailyTemp}°C</h5>
             <p class="card-text">Humidity: ${dailyHumidity}%</p>
           </div>
-        </div>
-      </div>
-    </div>`
+        </div>`
 
 
     dailyOutput.innerHTML += dailyContainer;
