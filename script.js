@@ -121,7 +121,7 @@ function outputWeatherInfo(locationInfo, weatherInfo){
 
     var dailyContainer =
     ` 
-      <div class="card" style="width: 20rem;">
+      <div class="card" style="width: 15rem;">
           <div class="card-body">
             <h5 class="card-title">${date}</h5>
             <h5 class="card-title"><img src = ${dailyIconurl} width="80" height="80"></h5>Temperature: ${dailyTemp}°C</h5>
